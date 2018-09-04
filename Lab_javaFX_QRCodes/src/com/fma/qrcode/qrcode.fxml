@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fma.qrcode.qrcodeController">
+	<children>
+		<GridPane hgap="16.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" vgap="16.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<columnConstraints>
+				<ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+			</rowConstraints>
+			<children>
+            <ImageView fx:id="ImageQRCode1" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="TextFieldMsg" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1" />
+            <Button fx:id="ButtonUpdate" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="160.0" mnemonicParsing="false" onAction="#ButtonUpdateAction" text="Update" GridPane.rowIndex="4" />
+            <ChoiceBox fx:id="ChoiceBoxType" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.rowIndex="3" />
+            <GridPane hgap="8.0" vgap="8.0" GridPane.rowIndex="2">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" text="Padding X/Y" GridPane.columnSpan="2" />
+                  <TextField fx:id="TextFieldPaddingX" maxHeight="1.7976931348623157E308" maxWidth="64.0" GridPane.rowIndex="1" />
+                  <TextField fx:id="TextFieldPaddingY" maxHeight="1.7976931348623157E308" maxWidth="64.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+			</children>
+			<padding>
+				<Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+			</padding>
+		</GridPane>
+	</children>
+</AnchorPane>
