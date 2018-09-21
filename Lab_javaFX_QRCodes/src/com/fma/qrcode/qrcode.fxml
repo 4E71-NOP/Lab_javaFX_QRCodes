@@ -14,11 +14,11 @@
 			</columnConstraints>
 			<rowConstraints>
 				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
-            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
-				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="24.0" minHeight="10.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="48.0" minHeight="10.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="48.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+				<RowConstraints maxHeight="32.0" vgrow="ALWAYS" />
 			</rowConstraints>
 			<children>
             <TextField fx:id="TextFieldMsg" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1" />
@@ -61,7 +61,7 @@
                   <TextField fx:id="TextFieldSizeY" layoutX="10.0" layoutY="22.0" maxHeight="1.7976931348623157E308" maxWidth="64.0" text="256" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                </children>
             </GridPane>
-            <ScrollPane minHeight="256.0" minWidth="256.0" prefHeight="272.0" prefWidth="272.0">
+            <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="256.0" minWidth="256.0" prefHeight="272.0" prefWidth="272.0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
               <content>
                 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="256.0" minWidth="256.0">
                      <children>

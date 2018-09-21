@@ -84,6 +84,10 @@ public class qrcodeController {
 		case "UPC_EAN_EXTENSION":	bfm = BarcodeFormat.UPC_EAN_EXTENSION;	break;
 		}
 		// @formatter:on
+		double setX = (double) Integer.parseInt(TextFieldSizeX.getText());
+		double setY = (double) Integer.parseInt(TextFieldSizeY.getText());
+		ImageQRCode1.setFitWidth(setX);
+		ImageQRCode1.setFitHeight(setY);
 		ImageQRCode1.setImage(cg1.multiFormatCodeGenerator(TextFieldMsg.getText(),
 				Integer.parseInt(TextFieldSizeX.getText()), Integer.parseInt(TextFieldSizeY.getText()), bfm, "png",
 				Integer.parseInt(TextFieldPaddingX.getText()), Integer.parseInt(TextFieldPaddingY.getText())));
