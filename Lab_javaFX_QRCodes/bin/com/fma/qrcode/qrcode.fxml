@@ -15,16 +15,16 @@
 			<rowConstraints>
 				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
             <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" vgrow="ALWAYS" />
             <RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
             <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
 				<RowConstraints maxHeight="1.7976931348623157E308" vgrow="ALWAYS" />
 			</rowConstraints>
 			<children>
-            <ImageView fx:id="ImageQRCode1" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" />
             <TextField fx:id="TextFieldMsg" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.rowIndex="1" />
-            <Button fx:id="ButtonUpdate" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="160.0" mnemonicParsing="false" onAction="#ButtonUpdateAction" text="Update" GridPane.rowIndex="4" />
-            <ChoiceBox fx:id="ChoiceBoxType" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.rowIndex="3" />
-            <GridPane hgap="8.0" vgap="8.0" GridPane.rowIndex="2">
+            <Button fx:id="ButtonUpdate" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="160.0" mnemonicParsing="false" onAction="#ButtonUpdateAction" text="Update" GridPane.rowIndex="5" />
+            <ChoiceBox fx:id="ChoiceBoxType" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="150.0" GridPane.rowIndex="4" />
+            <GridPane hgap="8.0" vgap="8.0" GridPane.rowIndex="3">
               <columnConstraints>
                 <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
                 <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
@@ -42,6 +42,34 @@
                   <Insets />
                </GridPane.margin>
             </GridPane>
+            <GridPane hgap="8.0" vgap="8.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="16.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" text="Size X/Y" GridPane.columnSpan="2">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="TextFieldSizeX" maxHeight="1.7976931348623157E308" maxWidth="64.0" text="256" GridPane.rowIndex="1" />
+                  <TextField fx:id="TextFieldSizeY" layoutX="10.0" layoutY="22.0" maxHeight="1.7976931348623157E308" maxWidth="64.0" text="256" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <ScrollPane minHeight="256.0" minWidth="256.0" prefHeight="272.0" prefWidth="272.0">
+              <content>
+                <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="256.0" minWidth="256.0">
+                     <children>
+                        <ImageView fx:id="ImageQRCode1" fitHeight="256.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
 			</children>
 			<padding>
 				<Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />

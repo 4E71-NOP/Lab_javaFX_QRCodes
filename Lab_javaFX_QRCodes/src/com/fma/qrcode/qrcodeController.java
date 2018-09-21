@@ -19,6 +19,8 @@ public class qrcodeController {
 	@FXML 	private ChoiceBox<String> ChoiceBoxType;
 	@FXML	private TextField TextFieldPaddingX;
 	@FXML	private TextField TextFieldPaddingY;
+	@FXML	private TextField TextFieldSizeX;
+	@FXML	private TextField TextFieldSizeY;
 	@FXML	private TextField TextFieldMsg;
 	@FXML	private Button ButtonUpdate;
 	@FXML	private ImageView ImageQRCode1;
@@ -82,10 +84,9 @@ public class qrcodeController {
 		case "UPC_EAN_EXTENSION":	bfm = BarcodeFormat.UPC_EAN_EXTENSION;	break;
 		}
 		// @formatter:on
-		ImageQRCode1.setImage(cg1.multiFormatCodeGenerator(TextFieldMsg.getText(), (int) ImageQRCode1.getFitWidth(),
-				(int) ImageQRCode1.getFitHeight(), bfm, "png", Integer.parseInt(TextFieldPaddingX.getText()),
-				Integer.parseInt(TextFieldPaddingY.getText())));
-
+		ImageQRCode1.setImage(cg1.multiFormatCodeGenerator(TextFieldMsg.getText(),
+				Integer.parseInt(TextFieldSizeX.getText()), Integer.parseInt(TextFieldSizeY.getText()), bfm, "png",
+				Integer.parseInt(TextFieldPaddingX.getText()), Integer.parseInt(TextFieldPaddingY.getText())));
 	}
 
 	@FXML
@@ -94,6 +95,9 @@ public class qrcodeController {
 		ChoiceBoxType.getSelectionModel().select(0);
 		TextFieldPaddingX.setText("16");
 		TextFieldPaddingY.setText("64");
+		TextFieldSizeX.setText("256");
+		TextFieldSizeY.setText("256");
+		TextFieldMsg.setText("1234");
 
 		ChoiceBoxType.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
 			System.out.println(
